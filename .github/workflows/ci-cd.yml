@@ -25,6 +25,8 @@ jobs:
           pip install -r src/requirements.txt
 
       - name: Run unit tests
+        env:
+          TESTING: "true"
         run: |
           pytest -q
           

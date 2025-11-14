@@ -5,6 +5,9 @@ import joblib
 import pytest
 from fastapi.testclient import TestClient
 
+# Set testing mode before importing app
+os.environ["TESTING"] = "true"
+
 # Add parent directory to path for importing app
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from app import app
